@@ -41,3 +41,4 @@ As a sub-module, a hate speech filter is implemented using the KcELECTRA-hate cl
 # Evalutaion
 ![autoumatic evaluation](images/eval.png)
 
+
