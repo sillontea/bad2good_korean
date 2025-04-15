@@ -1,14 +1,14 @@
 # bad2good_korean
-![demo](images/demo.gif)
-
 A toy project for transforming toxic or offensive Korean sentences into polite and positive expressions using style transfer.
 This project rewrites toxic or hateful Korean sentences into more respectful and kind expressions.
 
-![example_result](images/screenshot.png)
+![demo](images/demo.gif)
 
 본 프로젝트의 목표는 SNS를 비롯한 온라인 비속어, 욕설에 대한 순화로 올바른 온라인 문화 형성 및 환경 구축을 위한 첫 걸음으로써 나쁜 말을 순화할 수 있는 어플리케이션을 제작하는 것입니다.
 나쁜 말 순화는 비속어 및 은어(예: 닥x, 이 또xx xx야(욕설), 이거 ㅅㅌㅊ네(은어)), 정치적, 성별, 세대 갈등을 조장, 사회적 문제를 야기하는 뉴스 기사의 악성 댓글(예: 이거 완전 좌빨이네(정치적), 한남, 한녀(성별), 틀x이네(세대))과 같은 텍스트들을 삭제, 대체, 원복 등을 통해 적절한 말로 변환하는 것을 목표로 했습니다. 
 씨x’와 같은 욕설은 삭제하고‘X나’, ‘졸라’ 와 같은 비속어는 ‘너무’, ‘굉장히’로 ‘개슬림’과 같은 단어는 ‘무슬림’으로 원복시킵니다.
+
+![example_result](images/screenshot.png)
 
 ----
 
