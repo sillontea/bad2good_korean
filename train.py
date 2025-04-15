@@ -9,6 +9,10 @@ from torch.nn.utils import clip_grad_norm_
 from evaluator import Evaluator
 from utils import tensor2text, calc_ppl, idx2onehot, add_noise, word_drop
 
+from models import StyleTransformer, Discriminator
+from data import load_dataset
+from config import Config
+
 def get_lengths(tokens, eos_idx):
     lengths = torch.cumsum(tokens == eos_idx, 1)
     lengths = (lengths == 0).long().sum(-1)
@@ -447,3 +451,19 @@ def auto_eval(config, vocab, model_F, test_iters, global_step, temperature):
         print('*' * 20, '********', '*' * 20, file=fw)
         
     model_F.train()
+
+
+def main():
+    config = Config()
+    train_iters, dev_iters, test_iters, vocab = load_dataset(config)
+    print('Vocab size:', len(vocab))
+    model_F = StyleTransformer(config, vocab).to(config.device)
+    model_D = Discriminator(config, vocab).to(config.device)
+    print(config.discriminator_method)
+    
+    train(config, vocab, model_F, model_D, train_iters, dev_iters, test_iters)
+    
+
+if __name__ == '__main__':
+    main()
+
